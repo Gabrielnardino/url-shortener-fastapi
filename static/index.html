@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encurtador de URL | Nardino.dev</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-200 flex items-center justify-center min-h-screen font-sans">
+
+    <div class="bg-gray-800 p-8 rounded-xl shadow-2xl w-full max-w-lg mx-4">
+        
+        <h1 class="text-3xl font-bold text-center text-white mb-2">Encurtador de URL</h1>
+        <p class="text-center text-gray-400 mb-6">Cole seu link longo para criar um apelido curto e memorável.</p>
+
+        <form id="url-form" class="space-y-4">
+            
+            <input 
+                type="url" 
+                id="long_url_input" 
+                placeholder="https://sua-url-muito-longa-e-complicada.com" 
+                required
+                class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
+            >
+            
+            <div class="flex items-center space-x-2">
+                <span class="text-gray-400 pl-3">meulink.com/</span>
+                <input 
+                    type="text" 
+                    id="custom_code_input" 
+                    placeholder="meu-link-legal (opcional)"
+                    class="flex-grow p-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
+                >
+            </div>
+            
+            <button 
+                type="submit" 
+                class="w-full p-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-800"
+            >
+                Encurtar Link
+            </button>
+        </form>
+
+        <div id="result" class="mt-6 text-center bg-gray-700 p-4 rounded-lg min-h-[50px] text-lg break-words transition-all duration-300">
+            </div>
+
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
